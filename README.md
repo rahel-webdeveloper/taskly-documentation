@@ -1,6 +1,6 @@
 # Taskly Pro documentaion
 
-## Taskly front end documentaion
+## Taskly Front End Documentaion
 
 > A lightweight, Full Stack task-management PWA built with Vanilla JavaScript, NanoStores, Chart.js and AI Advisor powered task advising.
 
@@ -14,7 +14,7 @@ Check out the live demo here: **[Taskly](https://task-ly-ai.vercel.app/)**
 
 ## 📋 Table of Contents
 
-- [Taskly Pro](#taskly-pro)
+- [Taskly Pro Documentation](#taskly-pro)
   - [🌐 Live Demo](#-live-demo)
   - [📋 Table of Contents](#-table-of-contents)
   - [🔍 Description](#-description)
@@ -223,14 +223,169 @@ export const getAdvice = async () => {
 - Advanced reporting and analytics
 - Custom themes and persolzation options
 
+---
+
+## Taskly Backend Documentaion
+
+Taskly backend project developed with JavaScript(Express.js) designed to support the Taskly application ecosystem. This service provides the necessary APIs, business logic, and data handling for the Taskly front-end and its features.
+
+---
+
+## Table of Contents
+
+- [Taskly Backend Documentation](#taskly-backend)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Project Structure](#project-structure)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [API Endpoints](#api-endpoints)
+    - [auth](#auth)
+    - [Tasks](#tasks)
+    - [Users](#users)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Author](#author)
+
+---
+
+## Overview
+
+**Taskly Backend** handles core logic, user management, task operations, and analytics for the Taskly productivity suite. It is built for seamless integration with a JavaScript/TypeScript front-end and is suitable for deployment as a cloud-based or local service.
+
+---
+
+## Features
+
+- User authentication and authorization
+- CRUD operations for tasks and categories
+- Fully RESTful API design with JSON responses
+- Integrated  with AI-based task task advisor
+- Designed for extensibility and easy deployment
+
+---
+
+## Project Structure
+
+```
+taskly-backend/
+├── config/             # Configuration files (arcjet, environment)
+├── controllers/        # Main controllers (auth, tasks, user)
+├── database/           # Connect to database
+├── middleware/         # All Middlewares (arcjet, auth, error)
+├── models/             # Models for (tasks, user)
+├── routes/             # All routes like (auth, tasks, user)
+├── app.js              #Main file for controlling server
+├── .env.development.local              #Environment variables for development mode file for controlling server
+├── .env.production.local              #Environment variables for production mode file for controlling server
+├── package.json
+└── README.md
+```
+
+---
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/rahel-webdeveloper/taskly-backend.git
+   cd taskly-backend
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment:**
+   - Add to `.env.(development/production).local` all below envirment variables.
+  
+```
+
+PORT=5000
+
+NODE_ENV="development"
+
+DB_URI="your db uri"
+
+JWT_SECRET="your jwt secret"
+
+JWT_EXPIRES_IN="your jwt expires time"
+
+ARCJET_KEY="ajkey_092ftm9ccefz"
+
+ARCJET_ENV="development/production"
+
+```
+
+---
+
+## Usage
+
+Start the backend server (default port is typically 5000):
+
+```bash
+npm start
+```
+
+Or, for development with auto-reload:
+
+```bash
+npm run dev
+```
+
+The backend will be accessible at `http://localhost:5000/` (or your configured port).
+
+---
+
+## API Endpoints
+
+> Some API Emdpoits are below.
+
+### auth
+
+- `POST /auth/sign-up` – Register a new user
+- `POST /auth/sign-in` – Authenticate user and retrieve token
+- `POST /auth/sign-out` – Sign Out user
+- `POST /auth/remove-account` – Deleting user account with validation of password.
+
+### Tasks
+
+- `GET /tasks` – Retrieve all tasks for the authenticated user
+- `POST /tasks` – Create a new task
+- `PUT /tasks/:id` – Update a task
+- `DELETE /tasks/:id` – Delete a task
+
+### Users
+
+- `GET /users` – Retrieve all users only to admin user
+- `GET /users/:id` – Retrieve  data for the authenticated user
+
+- _...and more depending on project scope_
+
+---
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Please open an issue or submit a pull request.
+
+---
+
+## License
+
+This project is public and currently does not specify a license.
+
 ### Author
 
 Made with 💜 by [**Khatibullah Rahel**](https://www.linkedin.com/in/khatibullah-rahel-a93a74281/)
 
+--- 
+
 > [!IMPORTANT]
 > Love Taskly? Throw us a ⭐ — it makes our day!😊
-
-[![GitHub stars](https://img.shields.io/github/stars/rahel-webdeveloper/taskly?style=social)](https://github.com/rahel-webdeveloper/taskly/stargazers)
 
 ---
 
